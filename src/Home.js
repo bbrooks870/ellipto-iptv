@@ -301,6 +301,8 @@ export default function Home() {
             }}
           >
             <Typography variant="body1">No playlists found.</Typography>
+            <Typography variant="body1">Collection of publicly available 6000+ IPTV Copy and Add Playlist.</Typography>
+            <Typography variant="body1">https://iptv-org.github.io/iptv/index.m3u</Typography>
             <Typography variant="body1">
               Click on the manage button in the playlists section of the left
               drawer and add a playlist.
