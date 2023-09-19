@@ -21,38 +21,6 @@ import db from "./config/dexie";
 import "./css/horizontal-scrolling-menu.css";
 import usePreventBodyScroll from "./hooks/usePreventBodyScroll";
 
-// Find the element with the text "No playlists found."
-const noPlaylistsElement = document.querySelector('Typography[variant="body1"]:contains("No playlists found.")');
-
-// Create a div element for the box
-const boxDiv = document.createElement('div');
-
-// Create a paragraph element for the text
-const textParagraph = document.createElement('p');
-textParagraph.textContent = "Collection of publicly available IPTV Copy and Add Playlist";
-
-// Create a button element for copying the URL
-const copyButton = document.createElement('button');
-copyButton.textContent = "Copy Link";
-copyButton.onclick = function() {
-  // Code to copy the URL to the clipboard
-  const url = "https://iptv-org.github.io/iptv/index.m3u";
-  const tempInput = document.createElement("input");
-  tempInput.value = url;
-  document.body.appendChild(tempInput);
-  tempInput.select();
-  document.execCommand("copy");
-  document.body.removeChild(tempInput);
-  alert("Link copied to clipboard");
-};
-
-// Append the text and copy button to the box div
-boxDiv.appendChild(textParagraph);
-boxDiv.appendChild(copyButton);
-
-// Insert the box div after the "No playlists found." element
-noPlaylistsElement.parentNode.insertBefore(boxDiv, noPlaylistsElement.nextSibling);
-
 
 const StyledIconButton = styled(IconButton)(({ theme }) => ({
   color: "#fff",
